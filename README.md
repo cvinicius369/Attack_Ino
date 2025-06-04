@@ -1,4 +1,4 @@
-# 🥷 **Attack Ino - Arduino Project**
+# 🥷 **RF Drone Analyzer - Arduino Project**
 
 Este projeto para Arduino tem fins **educacionais** e exemplifica como escanear e identificar frequências de drones comerciais na faixa de 2.4 GHz e, em seguida, enviar comandos simulados para interferir na comunicação com o drone. O código opera escaneando frequências de rádio e pode enviar pacotes de controle quando uma frequência ativa é detectada. 
 
@@ -34,7 +34,7 @@ Este projeto para Arduino tem fins **educacionais** e exemplifica como escanear 
 
 1. **Clonar o Repositório**: Baixe ou clone este repositório.
    ```bash
-   git clone https://github.com/cvinicius369/Attack_Ino.git
+   git clone https://github.com/cvinicius369/rfDroneAnalyzer.git
    ```
 
 2. **Carregar o Código no Arduino**: Abra o arquivo `.ino` no **Arduino IDE** e faça o upload para o seu Arduino.
