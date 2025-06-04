@@ -1,38 +1,40 @@
-# 🥷 **RF Drone Analyzer - Arduino Project**
+📡 RF Drone Analyzer - Arduino Educational Project
 
-Este projeto para Arduino tem fins **educacionais** e exemplifica como escanear e identificar frequências de drones comerciais na faixa de 2.4 GHz e, em seguida, enviar comandos simulados para interferir na comunicação com o drone. O código opera escaneando frequências de rádio e pode enviar pacotes de controle quando uma frequência ativa é detectada. 
+Este projeto para Arduino tem fins **estritamente educacionais** e demonstra como escanear e identificar frequências utilizadas por drones comerciais na faixa de 2.4 GHz. Após a identificação, ele permite o envio de **pacotes de teste simulando comunicações padrão**, com o objetivo de entender protocolos de rádio.
 
-⚠️ **IMPORTANTE**: Este projeto é exclusivamente para fins educacionais e não deve ser utilizado para práticas ilegais, como o sequestro de drones sem autorização.
-
-<img src="https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=blue&color=black"/> <img loading="lazy" src="https://img.shields.io/badge/Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white"> <img loading="lazy" src="https://img.shields.io/badge/Arduino_IDE-00979D?style=for-the-badge&logo=arduino&logoColor=white">
-
-## 🚧 **Arquitetura do Projeto**
-
-1. **Módulo de Escaneamento de Frequências**: Este módulo escaneia a faixa de frequências de 2.4 GHz (usada pela maioria dos drones) para identificar atividade em um canal. Quando detectada, ele retorna o canal ativo.
-
-2. **Módulo de Controle de Comandos**: Depois que a frequência do drone é identificada, este módulo envia comandos de controle simulados para o drone. Isso inclui comandos como "enviar pacote" para imitar a comunicação com o drone.
-
-3. **Módulo de Interface com o Usuário**: O usuário pode visualizar o canal detectado via comunicação serial e monitorar o status do envio dos comandos. 
-
-4. **Módulo de Segurança (Futuro)**: Em versões futuras, este módulo pode ser expandido para implementar verificação de sinal e funções de segurança para impedir que drones sejam controlados de forma maliciosa.
+⚠️ IMPORTANTE: Este projeto não realiza nenhuma ação de interferência real e **não deve ser utilizado para práticas ilegais**, como a interrupção ou controle não autorizado de drones.
 
 ---
 
-## 🚀 **Como Funciona**
+🚧 Arquitetura do Projeto
 
-- O código escaneia todos os 126 canais na faixa de 2.4 GHz, identificando o canal ativo utilizado pelo drone.
-- Quando um canal ativo é encontrado, o código configura o módulo **NRF24L01** para operar nesse canal.
-- Uma vez configurado, o código envia comandos simulados para interferir na comunicação do drone.
-  
-## 🛠️ **Requisitos de Hardware**
+- **Módulo de Escaneamento de Frequências:** Escaneia os 126 canais da faixa de 2.4 GHz para identificar atividade e retorna o canal ativo.
+- **Módulo de Simulação de Comunicação:** Após identificar um canal, este módulo envia **pacotes simulados** que imitam estruturas de comunicação para fins de análise de protocolo.
+- **Módulo de Interface com o Usuário:** Exibe via serial o canal detectado e o status das transmissões simuladas.
+- **Módulo de Segurança (Futuro):** Planejado para futuras versões, poderá verificar a integridade do sinal e impedir usos indevidos.
 
-- **Arduino Uno/Nano** (ou compatível)
-- **Módulo NRF24L01** (para comunicação em 2.4 GHz)
-- **Cabo USB** (para carregar o código no Arduino e monitorar via serial)
+---
 
-## 📝 **Como Usar**
+🚀 Como Funciona
 
-1. **Clonar o Repositório**: Baixe ou clone este repositório.
+1. O código escaneia todos os canais de 2.4 GHz para detectar sinais ativos.
+2. Quando um canal ativo é encontrado, o módulo NRF24L01 é configurado para operar nesse canal.
+3. São enviados pacotes de teste simulando uma comunicação padrão, com fins educacionais.
+
+---
+
+🛠️ Requisitos de Hardware
+
+- Arduino Uno, Nano ou compatível
+- Módulo NRF24L01
+- Cabo USB (para upload e monitoramento serial)
+
+---
+
+📝 Como Usar
+
+1. Clone este repositório:
+
    ```bash
    git clone https://github.com/cvinicius369/rfDroneAnalyzer.git
    ```
