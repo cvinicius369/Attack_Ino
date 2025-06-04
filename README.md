@@ -34,7 +34,7 @@ Este projeto para Arduino tem fins **educacionais** e exemplifica como escanear 
 
 1. **Clonar o Repositório**: Baixe ou clone este repositório.
    ```bash
-   git clone https://github.com/seuusuario/drone-hijack-arduino.git
+   git clone https://github.com/cvinicius369/Attack_Ino.git
    ```
 
 2. **Carregar o Código no Arduino**: Abra o arquivo `.ino` no **Arduino IDE** e faça o upload para o seu Arduino.
